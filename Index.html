@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neha — Digital Marketing &amp; SEO Specialist, Delhi</title>
+<meta name="description" content="Neha is a Delhi-based digital marketing and SEO specialist with 5+ years across e-commerce, analytics, and campaign strategy. Available for freelance projects and full-time roles.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper: #EEF1EA;
+    --paper-deep: #E4E8DD;
+    --ink: #16231F;
+    --ink-soft: #445048;
+    --marigold: #D89A2A;
+    --teal: #146A63;
+    --wine: #7A2A2E;
+    --line: rgba(22,35,31,0.14);
+    --line-strong: rgba(22,35,31,0.28);
+    --max: 1120px;
+    --text-max: 700px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--teal); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+  a:hover{ color: var(--wine); }
+  a:focus-visible, button:focus-visible{ outline: 2px solid var(--teal); outline-offset: 3px; }
+
+  h1,h2,h3{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    line-height: 1.12;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+  .prose{ max-width: var(--text-max); }
+
+  section{ padding: 96px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type{ border-bottom: none; }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position: sticky; top:0; z-index: 20;
+    background: rgba(238,241,234,0.88);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height: 68px;
+  }
+  .brand{ font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem; color:var(--ink); text-decoration:none; }
+  .brand:hover{ color: var(--ink); }
+  nav.links{ display:flex; gap:28px; }
+  nav.links a{ color: var(--ink-soft); font-size: 0.95rem; text-decoration:none; }
+  nav.links a:hover{ color: var(--teal); }
+  @media (max-width:640px){ nav.links{ display:none; } }
+
+  /* ---------- HERO ---------- */
+  .hero{ padding-top: 88px; padding-bottom: 80px; border-bottom: 1px solid var(--line); }
+  .hero-grid{
+    display:grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items:center;
+  }
+  @media (max-width: 860px){ .hero-grid{ grid-template-columns: 1fr; } }
+
+  .eyebrow-loc{ font-size:0.95rem; color: var(--ink-soft); margin-bottom: 18px; }
+  .eyebrow-loc .dot{ color: var(--marigold); }
+
+  h1.headline{ font-size: clamp(2.4rem, 5vw, 3.4rem); letter-spacing: -0.01em; }
+  h1.headline em{ font-style: italic; color: var(--teal); }
+
+  .hero-sub{ margin-top: 22px; font-size: 1.12rem; color: var(--ink-soft); max-width: 46ch; }
+
+  .cta-row{ display:flex; gap:16px; margin-top: 34px; flex-wrap: wrap; }
+  .btn{
+    display:inline-block; padding: 13px 24px; border-radius: 3px;
+    font-size: 0.95rem; font-weight:500; text-decoration:none;
+    border: 1.5px solid var(--ink);
+  }
+  .btn-primary{ background: var(--ink); color: var(--paper); }
+  .btn-primary:hover{ background: var(--teal); border-color: var(--teal); color: var(--paper); }
+  .btn-ghost{ background: transparent; color: var(--ink); border-color: var(--line-strong); }
+  .btn-ghost:hover{ border-color: var(--ink); color: var(--ink); }
+
+  /* growth chart graphic */
+  .chart-card{
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 28px 24px 18px;
+  }
+  .chart-card .cap{
+    font-family:'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--ink-soft);
+    display:flex; justify-content:space-between; margin-bottom: 4px;
+  }
+  .chart-card .cap b{ color: var(--ink); font-weight: 500; }
+  svg.growth{ width:100%; height:auto; display:block; }
+  .growth-line{
+    fill:none; stroke:var(--teal); stroke-width:3; stroke-linecap:round; stroke-linejoin:round;
+    stroke-dasharray: 480; stroke-dashoffset: 480;
+    animation: draw 1.6s 0.2s ease-out forwards;
+  }
+  .growth-dot{ fill: var(--marigold); opacity:0; animation: pop 0.4s ease-out forwards; }
+  .growth-dot.last{ fill: var(--wine); }
+  @keyframes draw{ to{ stroke-dashoffset: 0; } }
+  @keyframes pop{ to{ opacity:1; } }
+  .growth-months{ font-family:'IBM Plex Mono', monospace; font-size: 0.72rem; fill: var(--ink-soft); }
+  @media (prefers-reduced-motion: reduce){
+    .growth-line{ animation:none; stroke-dashoffset:0; }
+    .growth-dot{ animation:none; opacity:1; }
+  }
+
+  /* ---------- SECTION LABELS ---------- */
+  .kicker{
+    font-size: 0.95rem; color: var(--teal); margin-bottom: 10px; font-weight:500;
+  }
+  h2.section-title{ font-size: clamp(1.7rem, 3vw, 2.1rem); margin-bottom: 28px; }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  @media (max-width:800px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-text p{ color: var(--ink-soft); margin: 0 0 16px; }
+  .about-facts{ list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+  .about-facts li{
+    display:flex; justify-content:space-between; gap:20px;
+    padding: 14px 0; border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+  .about-facts li span:first-child{ color: var(--ink-soft); }
+  .about-facts li span:last-child{ text-align:right; font-weight:500; }
+
+  /* ---------- SERVICES (definition list, not cards) ---------- */
+  .service-row{
+    display:grid; grid-template-columns: 260px 1fr; gap: 32px;
+    padding: 26px 0; border-top: 1px solid var(--line);
+  }
+  .service-row:last-child{ border-bottom: 1px solid var(--line); }
+  @media (max-width:700px){ .service-row{ grid-template-columns: 1fr; gap:8px; } }
+  .service-row h3{ font-size: 1.15rem; font-weight:600; }
+  .service-row p{ margin:0; color: var(--ink-soft); max-width: 52ch; }
+
+  /* ---------- EXPERIENCE TIMELINE (genuinely chronological, so year labels justified) ---------- */
+  .timeline{ border-top: 1px solid var(--line); }
+  .tl-item{
+    display:grid; grid-template-columns: 130px 1fr; gap: 28px;
+    padding: 30px 0; border-bottom: 1px solid var(--line);
+  }
+  @media (max-width:700px){ .tl-item{ grid-template-columns: 1fr; gap:6px; } }
+  .tl-year{ font-family:'IBM Plex Mono', monospace; font-size:0.9rem; color: var(--marigold); padding-top:3px; }
+  .tl-role{ font-size: 1.2rem; font-weight:600; font-family:'Fraunces',serif; }
+  .tl-org{ color: var(--teal); font-weight:500; }
+  .tl-desc{ color: var(--ink-soft); margin-top:8px; max-width: 58ch; }
+  .tl-edit{
+    display:inline-block; margin-top:10px; font-size:0.85rem; color: var(--wine);
+    background: rgba(122,42,46,0.08); padding: 4px 10px; border-radius: 3px; font-family:'IBM Plex Mono',monospace;
+  }
+
+  /* ---------- CERTIFICATIONS ---------- */
+  .cert-list{ list-style:none; margin:0; padding:0; }
+  .cert-list li{
+    display:flex; align-items:baseline; gap:14px;
+    padding: 16px 0; border-top: 1px solid var(--line);
+    font-size: 1rem;
+  }
+  .cert-list li:last-child{ border-bottom: 1px solid var(--line); }
+  .cert-list .mark{ color: var(--marigold); font-size:1.2rem; line-height:0; }
+  .cert-list .yr{ margin-left:auto; color: var(--ink-soft); font-family:'IBM Plex Mono',monospace; font-size:0.85rem; }
+
+  /* ---------- CONTACT ---------- */
+  .contact-wrap{ display:grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  @media (max-width:800px){ .contact-wrap{ grid-template-columns:1fr; } }
+  .contact-list{ list-style:none; margin:0; padding:0; }
+  .contact-list li{ padding: 14px 0; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:16px;}
+  .contact-list li:last-child{ border-bottom:1px solid var(--line); }
+  .contact-list .k{ color: var(--ink-soft); }
+  .edit-flag{ color: var(--wine); font-family:'IBM Plex Mono',monospace; font-size:0.85rem; }
+
+  footer{ padding: 36px 0; text-align:left; }
+  footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; color: var(--ink-soft); font-size:0.9rem; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Neha</a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow-loc">Delhi, India <span class="dot">·</span> Available for freelance &amp; full-time roles</div>
+      <h1 class="headline">Digital marketing &amp; SEO,<br>built around <em>what people actually search.</em></h1>
+      <p class="hero-sub">I'm Neha — a digital marketer with five years across SEO, analytics, and e-commerce growth, now freelancing and open to full-time roles across Delhi-NCR.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#work">See my experience</a>
+        <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Download résumé</a>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="cap"><span>ORGANIC SESSIONS</span><b>[EDIT: add a real trend]</b></div>
+      <svg class="growth" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg">
+        <path class="growth-line" d="M10,130 L75,105 L140,110 L205,55 L270,30" />
+        <circle class="growth-dot" cx="10" cy="130" r="4" style="animation-delay:1.6s"/>
+        <circle class="growth-dot" cx="75" cy="105" r="4" style="animation-delay:1.75s"/>
+        <circle class="growth-dot" cx="140" cy="110" r="4" style="animation-delay:1.9s"/>
+        <circle class="growth-dot" cx="205" cy="55" r="4" style="animation-delay:2.05s"/>
+        <circle class="growth-dot last" cx="270" cy="30" r="5" style="animation-delay:2.2s"/>
+        <text class="growth-months" x="4" y="152">Apr</text>
+        <text class="growth-months" x="68" y="152">May</text>
+        <text class="growth-months" x="132" y="152">Jun</text>
+        <text class="growth-months" x="197" y="152">Jul</text>
+        <text class="growth-months" x="258" y="152">Aug</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <div class="kicker">About</div>
+      <h2 class="section-title">Grounded in analytics, comfortable with strategy.</h2>
+      <p>I've spent five years moving between SEO, analytics, and e-commerce marketing — most recently freelancing on organic growth and social strategy for brands preparing for high-traffic seasonal moments. I keep my SEO practice current with how AI-driven search — GEO and AEO — is changing how people find brands, alongside the fundamentals of technical and content SEO.</p>
+      <p>I've managed teams of five to ten people across in-house and freelance roles, and I read a Google Analytics dashboard the way most people read a headline.</p>
+    </div>
+    <ul class="about-facts">
+      <li><span>Based in</span><span>Delhi, India</span></li>
+      <li><span>Experience</span><span>5+ years, digital marketing &amp; SEO</span></li>
+      <li><span>Education</span><span>B.A. English Honours, SOL, Delhi University (2024)</span></li>
+      <li><span>Notice period</span><span>Immediate</span></li>
+      <li><span>Team handling</span><span>5–10 people</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="kicker">Services</div>
+    <h2 class="section-title">What I take on for clients</h2>
+
+    <div class="service-row">
+      <h3>SEO &amp; technical audits</h3>
+      <p>On-page, technical, and content SEO — built around how people, and increasingly AI answer engines, actually search.</p>
+    </div>
+    <div class="service-row">
+      <h3>Analytics &amp; reporting</h3>
+      <p>Google Analytics dashboards and reporting that tie traffic back to decisions a business can actually act on.</p>
+    </div>
+    <div class="service-row">
+      <h3>E-commerce marketing</h3>
+      <p>Campaign planning and organic growth work for online stores, from listings to conversion-focused content.</p>
+    </div>
+    <div class="service-row">
+      <h3>Social media &amp; content calendars</h3>
+      <p>Planned posting schedules, Reels, and a consistent voice across a brand's social accounts.</p>
+    </div>
+    <div class="service-row">
+      <h3>Event &amp; campaign marketing</h3>
+      <p>End-to-end social handling for time-boxed events — pre-event promotion through live, on-ground coverage.</p>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="kicker">Experience</div>
+    <h2 class="section-title">Selected work</h2>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-year">2026</div>
+        <div>
+          <div class="tl-role">Freelance Social Media Lead <span class="tl-org">— Diwali Mela</span></div>
+          <p class="tl-desc">Planning and running the account for a seasonal event: a monthly mix of posts and Reels ahead of the event, plus live on-ground Reels and competition coverage on event day.</p>
+          <span class="tl-edit">[EDIT: add reach / engagement numbers once the campaign runs]</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2025 – Present</div>
+        <div>
+          <div class="tl-role">Freelance Digital Marketer <span class="tl-org">— E-commerce</span></div>
+          <p class="tl-desc">SEO and digital marketing support for e-commerce clients.</p>
+          <span class="tl-edit">[EDIT: name the client/niche and add a results metric]</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">[EDIT: year]</div>
+        <div>
+          <div class="tl-role">Freelance Project <span class="tl-org">— TeamLease Edtech Limited</span></div>
+          <p class="tl-desc">[EDIT: one or two lines on what this project covered and the outcome]</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">[EDIT: years]</div>
+        <div>
+          <div class="tl-role">[EDIT: job title] <span class="tl-org">— Teleone</span></div>
+          <p class="tl-desc">[EDIT: key responsibilities and one measurable result]</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">[EDIT: years]</div>
+        <div>
+          <div class="tl-role">[EDIT: job title] <span class="tl-org">— Pharma Shots</span></div>
+          <p class="tl-desc">[EDIT: key responsibilities and one measurable result]</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">[EDIT: years]</div>
+        <div>
+          <div class="tl-role">[EDIT: job title] <span class="tl-org">— Floraindia</span></div>
+          <p class="tl-desc">[EDIT: key responsibilities and one measurable result]</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="kicker">Certifications &amp; education</div>
+    <h2 class="section-title">Credentials</h2>
+    <ul class="cert-list">
+      <li><span class="mark">●</span> Google Analytics Certified <span class="yr">Google</span></li>
+      <li><span class="mark">●</span> Google Digital Marketing Certified <span class="yr">Google</span></li>
+      <li><span class="mark">●</span> B.A. English Honours <span class="yr">School of Open Learning, Delhi University — 2024</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-wrap">
+    <div>
+      <div class="kicker">Contact</div>
+      <h2 class="section-title">Let's work together</h2>
+      <p style="color:var(--ink-soft); max-width:46ch;">Freelance projects, contract work, or full-time roles in digital marketing and SEO — I'd like to hear about it.</p>
+    </div>
+    <ul class="contact-list">
+      <li><span class="k">Email</span><span class="edit-flag">[EDIT: add your email]</span></li>
+      <li><span class="k">Phone</span><span class="edit-flag">[EDIT: add your phone number]</span></li>
+      <li><span class="k">LinkedIn</span><span class="edit-flag">[EDIT: add your LinkedIn URL]</span></li>
+      <li><span class="k">Location</span><span>Delhi, India</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Neha</span>
+    <span>Digital Marketing &amp; SEO Specialist, Delhi</span>
+  </div>
+</footer>
+
+</body>
+</html>
